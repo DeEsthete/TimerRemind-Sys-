@@ -1,0 +1,26 @@
+﻿<Window x:Class="TimerRemind.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TimerRemind"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="190" Width="400">
+    <Grid>
+        <CheckBox x:Name="isOn" Content="включен" HorizontalAlignment="Left" Margin="10,133,0,0" VerticalAlignment="Top" Height="16" Width="75" Checked="IsOnChecked" Unchecked="IsOnUnchecked"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Во сколько напомнить:" VerticalAlignment="Top" Width="189" Height="27"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,42,0,0" TextWrapping="Wrap" Text="Интервал между напоминаниями:" VerticalAlignment="Top" Height="25"/>
+        <TextBox x:Name="hourTimeStartTextBox" HorizontalAlignment="Left" Height="27" Margin="204,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="41"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,72,0,0" TextWrapping="Wrap" Text="Сообщение:" VerticalAlignment="Top" Height="25"/>
+        <TextBox x:Name="messageTextBox" HorizontalAlignment="Left" Height="56" Margin="80,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="302"/>
+        <TextBlock HorizontalAlignment="Left" Margin="245,10,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" Width="5" Height="27" FontWeight="Bold" FontSize="18"/>
+        <TextBox x:Name="minuteTimeStartTextBox" HorizontalAlignment="Left" Height="27" Margin="250,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="41"/>
+        <TextBlock HorizontalAlignment="Left" Margin="291,10,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" Width="5" Height="27" FontWeight="Bold" FontSize="18"/>
+        <TextBox x:Name="secondTimeStartTextBox" HorizontalAlignment="Left" Height="27" Margin="296,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="41"/>
+        <TextBox x:Name="hourTimeIntervalTextBox" HorizontalAlignment="Left" Height="27" Margin="204,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="41"/>
+        <TextBlock HorizontalAlignment="Left" Margin="245,40,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" Width="5" Height="27" FontWeight="Bold" FontSize="18"/>
+        <TextBox x:Name="minuteTimeIntervalTextBox" HorizontalAlignment="Left" Height="27" Margin="250,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="41"/>
+        <TextBlock HorizontalAlignment="Left" Margin="291,40,0,0" TextWrapping="Wrap" Text=":" VerticalAlignment="Top" Width="5" Height="27" FontWeight="Bold" FontSize="18"/>
+        <TextBox x:Name="secondTimeIntervalTextBox" HorizontalAlignment="Left" Height="27" Margin="296,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="41"/>
+    </Grid>
+</Window>
