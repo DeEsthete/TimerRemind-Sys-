@@ -30,11 +30,24 @@ namespace TimerRemind
 
         private void IsOnChecked(object sender, RoutedEventArgs e)
         {
-            _timer = new Timer(new TimerCallback(ShowMessage), messageTextBox, iMilliseconds, int.Parse(intervalTextBox.Text) * 60000);
+            const int MINUTE = 60;
+            const int SECOND = 60;
+            const int MILISECOND = 1000;
+            try
+            {
+                int startTime = (int.Parse(hourTimeStartTextBox.Text) * MINUTE * SECOND * MILISECOND) + (int.Parse(minuteTimeStartTextBox.Text) * SECOND * MILISECOND) + (int.Parse(secondTimeStartTextBox.Text) * MILISECOND);
+                int intervalTime = (int.Parse(hourTimeIntervalTextBox.Text) * MINUTE * SECOND * MILISECOND) + (int.Parse(minuteTimeIntervalTextBox.Text) * SECOND * MILISECOND) + (int.Parse(secondTimeIntervalTextBox.Text) * MILISECOND);
+                _timer = new Timer(new TimerCallback(ShowMessage), messageTextBox, startTime, intervalTime);
+            }
+            catch
+            {
+                MessageBox.Show("Не правильно задано время");
+            }
         }
 
         private void IsOnUnchecked(object sender, RoutedEventArgs e)
         {
+            _timer.Dispose();
             _timer = null;
         }
 
@@ -54,14 +67,6 @@ namespace TimerRemind
                     }
                 }
             );
-            //if (message.Text == "")
-            //{
-            //    MessageBox.Show("Уже пора!");
-            //}
-            //else
-            //{
-            //    MessageBox.Show(message.Text);
-            //}
         }
     }
 

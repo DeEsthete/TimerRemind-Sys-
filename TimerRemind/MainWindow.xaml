@@ -8,7 +8,7 @@
         Title="MainWindow" Height="190" Width="400">
     <Grid>
         <CheckBox x:Name="isOn" Content="включен" HorizontalAlignment="Left" Margin="10,133,0,0" VerticalAlignment="Top" Height="16" Width="75" Checked="IsOnChecked" Unchecked="IsOnUnchecked"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Во сколько напомнить:" VerticalAlignment="Top" Width="189" Height="27"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Через сколько напомнить:" VerticalAlignment="Top" Width="189" Height="27"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,42,0,0" TextWrapping="Wrap" Text="Интервал между напоминаниями:" VerticalAlignment="Top" Height="25"/>
         <TextBox x:Name="hourTimeStartTextBox" HorizontalAlignment="Left" Height="27" Margin="204,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="41"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,72,0,0" TextWrapping="Wrap" Text="Сообщение:" VerticalAlignment="Top" Height="25"/>
